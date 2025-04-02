@@ -19,7 +19,7 @@ def count_total_explored_nodes(a,  b ,   c,  d  ):
     node_explored_forward_small_G += c
     node_explored_Adaptive_large_G += d
     
-    # print (node_explored_forward_large_G, node_explored_backward_large_G , node_explored_forward_small_G  ,node_explored_Adaptive_large_G)
+
 
 
 
@@ -169,11 +169,10 @@ def A_star_search_in_Adaptive(arr, start, dest, hnew_matrix):
        
         if curr.location == dest:
             # we have found the dest, return the path
-            # print('we have reach the dest')
             temp_list = curr.parent
             temp_list.append (curr.location)
             
-            # print (f'Adaptive: there are {len (closed_list)} Node have been explored')   
+
             
             
             
@@ -197,7 +196,7 @@ def A_star_search_in_Adaptive(arr, start, dest, hnew_matrix):
             skip_closed_node = False
             for closed_node in closed_list:
                 if closed_node.location == neighbor:
-                    # neighbor.location == closed_node.location, in other words curr is in the closed list
+
                     skip_closed_node = True
                     # print ('this neighbor is in closed_list, skip it')
                     break
@@ -245,7 +244,7 @@ def A_star_search_in_Adaptive(arr, start, dest, hnew_matrix):
         if len(open_list) ==  0:
             # we do not have avilible node in the open list, means there is no path from start to dest
             print ('DOES NNOT exist such path! ')
-            # print (curr.parent)
+
             return None
             
  
@@ -945,7 +944,7 @@ def A_star_search(arr, start, dest, Forward=True):
                 if closed_node.location == neighbor:
                     # neighbor.location == closed_node.location, in other words curr is in the closed list
                     skip_closed_node = True
-                    # print ('this neighbor is in closed_list, skip it')
+
                     break
             if skip_closed_node:
                 continue
@@ -991,7 +990,7 @@ def A_star_search(arr, start, dest, Forward=True):
         if len(open_list) ==  0:
             # we do not have avilible node in the open list, means there is no path from start to dest
             print ('DOES NNOT exist such path! ')
-            # print (curr.parent)
+
             return None
             
         
@@ -1412,7 +1411,7 @@ def main    ():
     
     # generate 50 maze, store all of them in a result_list
     
-    speed_mode = bool(int(input('Would you like to run in Speed_mode?  Anser with 1 or 0, 1 means Speedmode\n')))
+    speed_mode = bool(int(input('Would you like to run in Speed_Experiment_Mode?  Anser with 1 or 0, 1 means Speedmode\n')))
     
     
     set_foulder_name = False
